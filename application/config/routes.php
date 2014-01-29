@@ -64,7 +64,7 @@
 
 
 
-	$route['default_controller'] = "helloworld";
+	$route['default_controller'] = "Default_Controller";
 	
 $route['404_override'] = '';
 

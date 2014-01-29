@@ -9,20 +9,15 @@ class HelloWorld extends CI_Controller {
 
 	public function index()
 	{
-		$data['sample1'] = "Hello World";
-
-		$data['var1'] = 1;
-		$data['var2'] = 2;
-
-
-
-		$this->load->model("m_addition");
-
-		$data['sum'] = $this->m_addition->add($data['var1'],$data['var2']);
-
-
-
-		$this->load->view('secondview', $data);	
+		$this->load->model("m_get_db");
+		$data['results'] = $this->m_get_db->getAll(); 
+		
+		$this->load->view("v_db", $data);
+		
+	}
+	
+	function getValues(){
+		
 	}
 
 }
